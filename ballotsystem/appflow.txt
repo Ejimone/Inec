@@ -1,0 +1,21 @@
+Development Flow (appflow.txt)
+
+1. Setup
+   - Install Brownie, Web3.py, Flask/React.
+   - Configure Polygon Mumbai testnet (get MATIC from faucet).
+2. Smart Contracts
+   - Write CredentialRegistry.sol.
+   - Test with Brownie (issue, verify, revoke).
+   - Deploy to Mumbai.
+3. Backend
+   - Build API with Flask/FastAPI.
+   - Connect to contract via Web3.py.
+   - Test endpoints locally.
+4. Frontend
+   - Create issuer dashboard, wallet, verifier pages.
+   - Hook up to backend API.
+   - Add MetaMask integration.
+5. Polish
+   - Add QR codes for sharing/verifying.
+   - Test end-to-end flow.
+   - Write README.md with setup/run instructions.

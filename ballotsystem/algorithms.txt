@@ -1,0 +1,29 @@
+Algorithms (algorithms.txt):
+
+1. Issue Credential
+   Input: recipient (address), title (string), date (uint)
+   Steps:
+
+   - Check caller is issuer (require).
+   - Generate unique ID (increment counter).
+   - Create Credential struct.
+   - Store in mapping.
+   - Emit CredentialIssued event.
+     Output: credential ID
+
+2. Verify Credential
+   Input: credential ID (uint)
+   Steps:
+
+   - Fetch Credential from mapping.
+   - Check exists and !isRevoked.
+   - Return details or "invalid".
+     Output: struct or error
+
+3. Get User Credentials
+   Input: user address
+   Steps:
+   - Filter CredentialIssued events by recipient.
+   - Check each ID for revocation.
+   - Return list of valid credential IDs.
+     Output: array of IDs
